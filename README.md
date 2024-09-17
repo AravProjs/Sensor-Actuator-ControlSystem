@@ -8,11 +8,9 @@ The **Sensor-Actuator Control System** is a robust Java-based framework designed
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Class Descriptions](#class-descriptions)
 - [Test Data](#test-data)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## 📖 Overview
@@ -51,46 +49,7 @@ To set up and run the project on your local machine, follow these steps:
    ```bash
    java -jar build/libs/Sensor-Actuator-ControlSystem.jar
    ```
-2. **Configure Sensor and Actuator Parameters:** Edit the configuration file `config/settings.json` to set parameters for sensors and actuators (e.g., types, frequencies, endpoints).
-3. **Monitor Real-Time Data:** The system logs real-time data to the `logs` directory, which can be monitored for system activity and performance.
-
-## 🏗️ Project Structure
-
-```
-Sensor-Actuator-ControlSystem/
-├── client/
-│   ├── Client.java                         # Client-side logic for interacting with the server
-│   ├── Request.java                        # Defines the structure of requests sent by clients
-│   ├── RequestCommand.java                 # Enumerates types of commands a request can have
-│   └── RequestType.java                    # Enumerates different request categories
-├── entity/
-│   ├── Actuator.java                       # Represents an actuator entity
-│   ├── Entity.java                         # Base interface for all entities (sensors and actuators)
-│   └── Sensor.java                         # Represents a sensor entity
-├── event/
-│   ├── ActuatorEvent.java                  # Event structure for actuator-related activities
-│   ├── Event.java                          # Interface for events handled by the system
-│   ├── RequestOrEvent.java                 # Enum to distinguish between requests and events
-│   ├── SensorEvent.java                    # Event structure for sensor-related activities
-│   └── TimeToProcess.java                  # Manages event processing timing
-├── handler/
-│   ├── MessageHandler.java                 # Manages incoming messages from clients and entities
-│   └── MessageHandlerThread.java           # Thread class to handle messages concurrently
-├── server/
-│   ├── Filter.java                         # Implements dynamic filtering logic for events
-│   ├── FilterException.java                # Custom exception class for filter-related errors
-│   ├── Server.java                         # Main server class to handle events and manage client interactions
-│   ├── SeverCommandToActuator.java         # Enum representing server commands directed at actuators
-│   └── TimeWindow.java                     # Represents a time window for event filtering
-├── data/
-│   └── tests/                              # Test data for validating system functionality
-│       ├── single_client_1000_events_in-order.csv       # Events in chronological order
-│       └── single_client_1000_events_out-of-order.csv   # Events out of order
-├── README.md                               # Project documentation
-├── build.gradle                            # Gradle build configuration file
-└── config/
-    └── settings.json                       # Configuration file for sensors and actuators
-```
+2. **Monitor Real-Time Data:** The system logs real-time data to the `logs` directory, which can be monitored for system activity and performance.
 
 ## 📝 Class Descriptions
 
@@ -134,10 +93,6 @@ Contributions are welcome! To contribute:
 2. Create a new branch for your feature or bug fix.
 3. Commit your changes with clear messages.
 4. Submit a pull request with a description of your changes.
-
-## 📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## 📬 Contact
 
